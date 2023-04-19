@@ -4,11 +4,17 @@
 <head>
     <title>中华田园敏捷宣言</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- SEO: gitlab.io and www should not be indexed -->
+    <link rel="canonical" href="https://minjie.icu/" />
     <script>
         // gitlab pages doesn't support redirect www to no-www
         if (window.location.host.startsWith("www")) {
             window.location.replace(window.location.href.replace("www.", ""))
+        }
+        // redirect group.gitlab.io to custom domain
+        if (window.location.host != "minjie.icu") {
+            window.location.href = "https://minjie.icu"
         }
     </script>
 </head>
