@@ -13,7 +13,8 @@
             window.location.replace(window.location.href.replace("www.", ""))
         }
         // redirect group.gitlab.io to custom domain
-        if (window.location.host != "minjie.icu") {
+        if (window.location.protocol
+            == "https" && window.location.host != "minjie.icu") {
             window.location.href = "https://minjie.icu"
         }
     </script>
@@ -24,6 +25,7 @@
     }
 
     body {
+        margin: 0;
         background-image: url('background.jpg');
         background-repeat: repeat-y;
         background-size: cover;
@@ -31,11 +33,11 @@
     }
 
     .container {
-        min-width: 384px;
+        padding: 0 1em;
     }
 
     h1 {
-        margin: 2em auto;
+        margin: 1.5em auto 1em;
     }
 
     ul {
@@ -65,10 +67,14 @@
         p.conclusion {
             width: 13em;
         }
+
+        .container {
+            min-width: 512px;
+        }
     }
 
     .author {
-        margin-top: 4em;
+        margin-top: 1em;
     }
 
     .copyright {
@@ -98,7 +104,7 @@
 
         <div class="author">
             <h2>作者</h2>
-            <ul style="list-style: none; padding: 0;">
+            <ul>
                 <li><a href="https://www.zhihu.com/people/old-programmer" target="_blank">麦田里的程序员</a></li>
             </ul>
         </div>
